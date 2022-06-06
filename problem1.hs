@@ -7,7 +7,7 @@ multiples :: Int -> Int
 multiples x = multiples' (x - 1) 0
 
 multiples' :: Int -> Int -> Int
-multiples' 0 sum = sum
+multiples' 0 sum                    = sum
 multiples' x sum | (x `mod` 3) == 0 = multiples' (x - 1) (sum + x)
                  | (x `mod` 5) == 0 = multiples' (x - 1) (sum + x)
-                 | otherwise = multiples' (x - 1) sum 
+                 | otherwise        = multiples' (x - 1)  sum 
